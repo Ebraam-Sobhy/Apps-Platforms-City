@@ -115,23 +115,22 @@ export default function RotatingCube() {
           </p>
         </div>
         {/* Videos */}
-{/* Wrapper */}
-<div className="w-full flex justify-center mt-14">
-  
-    {/* Video */}
-    <div className="w-full max-w-[800px]">
-      <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
-        <iframe
-          className="absolute inset-0 w-full h-full"
-          src="https://www.youtube.com/embed/eLYizanla8A?si=LeWvRqkYUzVhGcg1"
-          title="Video"
-          frameBorder="0"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  </div>
-</div>
+        <div className="w-full flex justify-center mt-14">
+          
+            {/* Video */}
+            <div className="w-full max-w-[800px]">
+              <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/eLYizanla8A?si=LeWvRqkYUzVhGcg1"
+                  title="Video"
+                  frameBorder="0"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div> 
   
   );
