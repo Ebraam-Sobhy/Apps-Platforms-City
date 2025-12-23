@@ -134,7 +134,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/WE3GdR1ULOE?si=05ejGQYboZ217XJU"
+                  src="https://www.youtube.com/embed/FwT6_JFAk5Y?si=k5qPxfyr0qb07R9j"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -147,7 +147,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/1xKPtNy1PjM?si=vtop3dT2iop0UwvI"
+                  src="https://www.youtube.com/embed/D3zgsK7n1js?si=082V_2h3MyvcbNi8"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen

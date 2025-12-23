@@ -484,13 +484,6 @@ export default function SocialMediaCity() {
     const createFloatingIcon = () => {
       const iconGroup = new THREE.Group();
       
-      // Create a base for the icon
-      const baseGeometry = new THREE.CylinderGeometry(0.5, 0.5, 0.2, 16);
-      const baseMaterial = new THREE.MeshStandardMaterial({ color: platform.color });
-      const base = new THREE.Mesh(baseGeometry, baseMaterial);
-      base.position.y = height + 1.5;
-      iconGroup.add(base);
-      
       // Create image plane for the icon
       const img = new Image();
       img.crossOrigin = 'anonymous';
@@ -512,7 +505,7 @@ export default function SocialMediaCity() {
         ctx.fill();
         
         // Draw image
-        const imageSize = 180;
+        const imageSize = 140;
         const x = (canvas.width - imageSize) / 2;
         const y = (canvas.height - imageSize) / 2;
         ctx.drawImage(img, x, y, imageSize, imageSize);

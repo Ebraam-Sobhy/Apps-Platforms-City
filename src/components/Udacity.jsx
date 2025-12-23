@@ -96,13 +96,13 @@ export default function RotatingCube() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center space-y-6 sm:space-y-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Notion
+            Udaicty
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            Notion is an all-in-one workspace for note-taking, project management, and collaboration, allowing teams and individuals to organize their work efficiently.
+            Udacity is an online education platform offering nanodegree programs and courses in tech fields like AI, programming, data science, and more.
           </p>
           <a
-            href="https://www.notion.com"
+            href="https://www.udaicty.com"
             rel="noopener noreferrer"
             className="
               inline-flex items-center justify-center
