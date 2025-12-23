@@ -9,6 +9,7 @@ export default function WelcomePage() {
 
   useEffect(() => {
     setIsLoaded(true);
+    document.title = "Welcome";
   }, []);
 
   const handleEnter = () => {

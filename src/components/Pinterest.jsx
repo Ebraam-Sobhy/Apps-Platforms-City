@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import cubeImage from '/github-logo.png';
+import cubeImage from '/pinterest.png';
 
 export default function RotatingCube() {
   const mountRef = useRef(null);
@@ -15,8 +15,7 @@ export default function RotatingCube() {
     const width = mountRef.current.clientWidth;
     const height = getHeight();
 
-    document.title = 'GitHub'
-
+    document.title = 'Pinterest'
 
     // Scene
     const scene = new THREE.Scene();
@@ -91,34 +90,33 @@ export default function RotatingCube() {
   return (
 
     <div className="min-h-screen bg-black">
-
       <div className="w-full flex justify-center items-start h-64 sm:h-80 md:h-96 mb-20">
         <div ref={mountRef} className="w-full max-w-4xl h-full" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#ffffff] leading-tight">
-            GitHub
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#BD081c] leading-tight">
+            Pinterest
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            GitHub is a platform for version control and collaboration, where developers can store, manage, and share their code.
+            Pinterest is a visual discovery platform where users can find, save, and share ideas through images and videos, known as Pins, across a wide range of interests.
           </p>
           <a
-            href="https://www.github.com"
+            href="https://www.pinterest.com"
             rel="noopener noreferrer"
             className="
               inline-flex items-center justify-center
               px-8 py-4 mt-4
               text-lg font-bold
-              text-black
-              bg-white
+              text-white
+              bg-[#BD081c]
               rounded-full
               hover:opacity-90
               transition duration-300
               shadow-lg
             "
           >
-            Visit GitHub
+            Visit Pinterest
           </a>
         </div>
         {/* Videos */}
@@ -134,7 +132,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/v5gnvDUWqFM?si=W13Vg2hyzSu_W4JW"
+                  src="https://www.youtube.com/embed/KbCoaGiGqhE?si=QXpXQZvJfh4sFrHV"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -147,7 +145,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/vA5TTz6BXhY?si=ajth-hSAOg_HpACN"
+                  src="https://www.youtube.com/embed/XBr8FKuP8Es?si=YMzzDcCAiQq6AgKm"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen

@@ -1,14 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { useNavigate } from 'react-router-dom';
 import cubeImage from '/discord.png';
 
 export default function RotatingCube() {
   const mountRef = useRef(null);
   const isInitialized = useRef(false);
   const animationId = useRef(null);
-  const navigate = useNavigate();
-
 
   useEffect(() => {
     if (!mountRef.current || isInitialized.current) return;
@@ -17,6 +14,8 @@ export default function RotatingCube() {
     const getHeight = () => Math.min(window.innerHeight * 0.5, 400);
     const width = mountRef.current.clientWidth;
     const height = getHeight();
+
+    document.title = 'Discord'
 
     // Scene
     const scene = new THREE.Scene();
@@ -91,31 +90,32 @@ export default function RotatingCube() {
   return (
 
     <div className="min-h-screen bg-black">
-      {/* Go to City Button */}
-      <button
-        onClick={() => navigate('/City')}
-        className="fixed top-4 left-4 z-50
-                    bg-blue-600 text-white
-                    px-5 py-2 rounded-xl
-                    font-semibold
-                    shadow-lg
-                    hover:bg-blue-500
-                    transition"
-      >
-        Go to City
-      </button>
-
       <div className="w-full flex justify-center items-start h-64 sm:h-80 md:h-96 mb-20">
         <div ref={mountRef} className="w-full max-w-4xl h-full" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#ffffff] leading-tight">
-            GitHub
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#5865F2] leading-tight">
+            Discord
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            GitHub is a platform for version control and collaboration, where developers can store, manage, and share their code.
+            Discord is a communication platform where communities connect through voice, video, and text, making it ideal for gaming, learning, and collaboration.
           </p>
+          <a
+          href="https://www.discord.com"
+          rel="noopener noreferrer"
+          className="
+            inline-flex items-center justify-center
+            px-8 py-4 mt-4
+            text-lg font-bold
+            text-white bg-[#5865F2]
+            rounded-full
+            transition duration-300
+            shadow-lg
+          "
+        >
+          Visit Discord
+        </a>
         </div>
         {/* Videos */}
         {/* Wrapper */}
@@ -130,7 +130,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/v5gnvDUWqFM?si=W13Vg2hyzSu_W4JW"
+                  src="https://www.youtube.com/embed/WE3GdR1ULOE?si=05ejGQYboZ217XJU"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -143,7 +143,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/vA5TTz6BXhY?si=ajth-hSAOg_HpACN"
+                  src="https://www.youtube.com/embed/1xKPtNy1PjM?si=vtop3dT2iop0UwvI"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen

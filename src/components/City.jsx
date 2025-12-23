@@ -36,26 +36,23 @@ export default function SocialMediaCity() {
 
 // Handle navigation to platform
   const navigateToPlatform = () => {
-    if (currentPlatform) {
-      // Mark as visited
-      setVisitedPlatforms(prev => new Set([...prev, currentPlatform.name]));
-      
-      // Navigate to platform route
-      if (currentPlatform.route) {
-        navigate(currentPlatform.route);
-      } else {
-        // Fallback to external link
-        window.open(currentPlatform.link, '_blank');
-      }
-    }
-  };  
+  if (!currentPlatform) return;
+
+  setVisitedPlatforms(prev => new Set([...prev, currentPlatform.name]));
+
+  if (currentPlatform.route) {
+    const url = `${window.location.origin}${currentPlatform.route}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+  } else if (currentPlatform.link) {
+    window.open(currentPlatform.link, '_blank', 'noopener,noreferrer');
+  }
+};
 
   // Social media platforms data with image URLs
   const platforms = [
     {
       name: 'Reddit',
       color: 0xff4500,
-      description: 'The front page of the internet. Community-driven discussions and content sharing.',
       link: 'https://reddit.com',
       position: { x: -15, z: -10 },
       route: '/reddit',
@@ -64,7 +61,6 @@ export default function SocialMediaCity() {
     {
       name: 'YouTube',
       color: 0xff0000,
-      description: 'World\'s largest video sharing platform. Watch, create, and share videos.',
       link: 'https://youtube.com',
       position: { x: 15, z: -10 },
       route: '/youtube',
@@ -73,7 +69,6 @@ export default function SocialMediaCity() {
     {
       name: 'Instagram',
       color: 0xe1306c,
-      description: 'Photo and video sharing social network. Connect through visual content.',
       link: 'https://instagram.com',
       position: { x: -15, z: -30 },
       route: '/instagram',
@@ -82,7 +77,6 @@ export default function SocialMediaCity() {
     {
       name: 'LinkedIn',
       color: 0x0077b5,
-      description: 'Professional networking platform. Connect with colleagues and find opportunities.',
       link: 'https://linkedin.com',
       position: { x: 15, z: -30 },
       route: '/linkedin',
@@ -90,8 +84,7 @@ export default function SocialMediaCity() {
     },
     {
       name: 'GitHub',
-      color: 0x181717,
-      description: 'Code hosting platform for version control and collaboration.',
+      color: 0x00000,
       link: 'https://github.com',
       position: { x: 0, z: -50 },
       route: '/github',
@@ -100,7 +93,6 @@ export default function SocialMediaCity() {
     {
       name: 'Discord',
       color: 0x5865f2,
-      description: 'Voice, video, and text communication platform for communities.',
       link: 'https://discord.com',
       position: { x: -20, z: -70 },
       route: '/discord',
@@ -109,7 +101,6 @@ export default function SocialMediaCity() {
     {
       name: 'Pinterest',
       color: 0xe60023,
-      description: 'Visual discovery engine for finding ideas and inspiration.',
       link: 'https://pinterest.com',
       position: { x: 20, z: -70 },
       route: '/pinterest',
@@ -118,7 +109,6 @@ export default function SocialMediaCity() {
     {
       name: 'Stack Overflow',
       color: 0xf48024,
-      description: 'Q&A platform for programmers. Find solutions to coding problems.',
       link: 'https://stackoverflow.com',
       position: { x: -15, z: -90 },
       route: '/stackoverflow',
@@ -127,7 +117,6 @@ export default function SocialMediaCity() {
     {
       name: 'Udemy',
       color: 0xa435f0,
-      description: 'Online learning platform with thousands of courses.',
       link: 'https://udemy.com',
       position: { x: 15, z: -90 },
       route: '/udemy',
@@ -136,7 +125,6 @@ export default function SocialMediaCity() {
     {
       name: 'Notion',
       color: 0x000000,
-      description: 'All-in-one workspace for notes, tasks, wikis, and databases.',
       link: 'https://notion.so',
       position: { x: 0, z: -110 },
       route: '/notion',
@@ -145,7 +133,6 @@ export default function SocialMediaCity() {
     {
       name: 'Google Workspace',
       color: 0x4285F4,
-      description: 'A suite of productivity and collaboration tools including Gmail, Docs, Drive, and Calendar.',
       link: 'https://google.com',
       position: { x: -25, z: -130 },
       route: '/google',
@@ -153,8 +140,7 @@ export default function SocialMediaCity() {
     },
     {
       name: 'Udacity',
-      color: 0x02b3e4,
-      description: 'Online learning platform with nanodegree programs.',
+      color: 0x2015FF,
       link: 'https://udacity.com',
       position: { x: 25, z: -130 },
       route: '/udacity',
@@ -163,7 +149,6 @@ export default function SocialMediaCity() {
     {
       name: 'Coursera',
       color: 0x2A73CC,
-      description: 'Online courses and certifications from top universities.',
       link: 'https://coursera.org',
       position: { x: -15, z: -150 },
       route: '/coursera',
@@ -172,7 +157,6 @@ export default function SocialMediaCity() {
     {
       name: 'ChatGPT',
       color: 0x000000,
-      description: 'AI-powered chatbot developed by OpenAI.',
       link: 'https://chat.openai.com',
       position: { x: 15, z: -150 },
       route: '/chatgpt',
@@ -181,7 +165,6 @@ export default function SocialMediaCity() {
     {
       name: 'Gemini',
       color: 0x0000ff,
-      description: 'Google’s AI-powered platform for generative AI and next-gen tools.',
       link: 'https://gemini.com',
       position: { x: -20, z: -170 },
       route: '/gemini',
@@ -190,7 +173,6 @@ export default function SocialMediaCity() {
     {
       name: 'Behance',
       color: 0x1769ff,
-      description: 'Showcase and discover creative work online.',
       link: 'https://behance.net',
       position: { x: 20, z: -170 },
       route: '/behance',
@@ -848,6 +830,8 @@ export default function SocialMediaCity() {
       scene.add(building);
       return building;
     });
+
+    document.title = 'Apps & Platforms City'
     
     createStreetLamps(scene);
     
@@ -867,7 +851,6 @@ export default function SocialMediaCity() {
       cleanupAnimation && cleanupAnimation();
     };
 
-    
   }, [navigate]);
 
   const handleTouchStart = (direction, e) => {
@@ -935,7 +918,9 @@ export default function SocialMediaCity() {
           <h3 style={{ 
             margin: '0 0 10px 0', 
             color: `#${currentPlatform.color.toString(16).padStart(6, '0')}`,
-            textAlign: 'center'
+            textAlign: 'center',
+            fontWeight: 'bolder',
+            fontSize: '30px', 
           }}>
             {currentPlatform.name}
           </h3>
@@ -947,15 +932,6 @@ export default function SocialMediaCity() {
           }}>
             {visitedPlatforms.has(currentPlatform.name)}
           </div>
-          
-          <p style={{ 
-            fontSize: '14px', 
-            lineHeight: '1.5', 
-            marginBottom: '15px',
-            textAlign: 'center'
-          }}>
-            {currentPlatform.description}
-          </p>
           
           {/* Navigate Button - Simple Version */}
           <button
