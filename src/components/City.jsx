@@ -13,11 +13,12 @@ import stackoverflowIcon from '/stackoverflow.png';
 import udemyIcon from '/udemy.jpg';
 import notionIcon from '/notion.png';
 import googleIcon from '/google.png';
-import udacityIcon from '/udacity.jpg';
+import freecodecampIcon from '/freecodecamp.png';
 import chatgptIcon from '/chatgpt.png';
 import courseraIcon from '/coursera.png';
 import geminiIcon from '/gemini.png';
 import behanceIcon from '/behance.png';
+import sharktank from '/shark-tank.png'
 
 export default function SocialMediaCity() {
   const containerRef = useRef(null);
@@ -48,12 +49,10 @@ export default function SocialMediaCity() {
   }
 };
 
-  // Social media platforms data with image URLs
   const platforms = [
     {
       name: 'Reddit',
       color: 0xff4500,
-      link: 'https://reddit.com',
       position: { x: -15, z: -10 },
       route: '/reddit',
       localImage: redditIcon,
@@ -61,7 +60,6 @@ export default function SocialMediaCity() {
     {
       name: 'YouTube',
       color: 0xff0000,
-      link: 'https://youtube.com',
       position: { x: 15, z: -10 },
       route: '/youtube',
       localImage: youtubeIcon
@@ -69,7 +67,6 @@ export default function SocialMediaCity() {
     {
       name: 'Instagram',
       color: 0xe1306c,
-      link: 'https://instagram.com',
       position: { x: -15, z: -30 },
       route: '/instagram',
       localImage: instagramIcon
@@ -77,7 +74,6 @@ export default function SocialMediaCity() {
     {
       name: 'LinkedIn',
       color: 0x0077b5,
-      link: 'https://linkedin.com',
       position: { x: 15, z: -30 },
       route: '/linkedin',
       localImage: linkedinIcon
@@ -85,7 +81,6 @@ export default function SocialMediaCity() {
     {
       name: 'GitHub',
       color: 0x00000,
-      link: 'https://github.com',
       position: { x: 0, z: -50 },
       route: '/github',
       localImage: githubIcon
@@ -93,7 +88,6 @@ export default function SocialMediaCity() {
     {
       name: 'Discord',
       color: 0x5865f2,
-      link: 'https://discord.com',
       position: { x: -20, z: -70 },
       route: '/discord',
       localImage: discordIcon
@@ -101,7 +95,6 @@ export default function SocialMediaCity() {
     {
       name: 'Pinterest',
       color: 0xe60023,
-      link: 'https://pinterest.com',
       position: { x: 20, z: -70 },
       route: '/pinterest',
       localImage: pinterestIcon
@@ -109,7 +102,6 @@ export default function SocialMediaCity() {
     {
       name: 'Stack Overflow',
       color: 0xf48024,
-      link: 'https://stackoverflow.com',
       position: { x: -15, z: -90 },
       route: '/stackoverflow',
       localImage: stackoverflowIcon
@@ -117,7 +109,6 @@ export default function SocialMediaCity() {
     {
       name: 'Udemy',
       color: 0xa435f0,
-      link: 'https://udemy.com',
       position: { x: 15, z: -90 },
       route: '/udemy',
       localImage: udemyIcon
@@ -125,7 +116,6 @@ export default function SocialMediaCity() {
     {
       name: 'Notion',
       color: 0x000000,
-      link: 'https://notion.so',
       position: { x: 0, z: -110 },
       route: '/notion',
       localImage: notionIcon
@@ -133,23 +123,20 @@ export default function SocialMediaCity() {
     {
       name: 'Google Workspace',
       color: 0x4285F4,
-      link: 'https://google.com',
       position: { x: -25, z: -130 },
       route: '/google',
       localImage: googleIcon
     },
     {
-      name: 'Udacity',
-      color: 0x2015FF,
-      link: 'https://udacity.com',
+      name: 'freecodecamp',
+      color: 0x0000ff,
       position: { x: 25, z: -130 },
-      route: '/udacity',
-      localImage: udacityIcon
+      route: '/freecodecamp',
+      localImage: freecodecampIcon
     },
     {
       name: 'Coursera',
       color: 0x2A73CC,
-      link: 'https://coursera.org',
       position: { x: -15, z: -150 },
       route: '/coursera',
       localImage: courseraIcon
@@ -157,7 +144,6 @@ export default function SocialMediaCity() {
     {
       name: 'ChatGPT',
       color: 0x000000,
-      link: 'https://chat.openai.com',
       position: { x: 15, z: -150 },
       route: '/chatgpt',
       localImage: chatgptIcon
@@ -165,7 +151,6 @@ export default function SocialMediaCity() {
     {
       name: 'Gemini',
       color: 0x0000ff,
-      link: 'https://gemini.com',
       position: { x: -20, z: -170 },
       route: '/gemini',
       localImage: geminiIcon
@@ -173,11 +158,38 @@ export default function SocialMediaCity() {
     {
       name: 'Behance',
       color: 0x1769ff,
-      link: 'https://behance.net',
       position: { x: 20, z: -170 },
       route: '/behance',
       localImage: behanceIcon
     },
+    {
+      name: 'Shark Tank',
+      color: 0x1da1f2,
+      position: { x: -25, z: -190 },
+      route: '/sharktank',
+      localImage: sharktank
+    },
+    // {
+    //   name: 'TikTok',
+    //   color: 0x000000,
+    //   position: { x: 25, z: -190 },
+    //   route: '/tiktok',
+    //   localImage: tiktokIcon
+    // },
+    // {
+    //   name: 'Medium',
+    //   color: 0x000000,
+    //   position: { x: -15, z: -210 },
+    //   route: '/medium',
+    //   localImage: mediumIcon
+    // },
+    // {
+    //   name: 'Slack',
+    //   color: 0x4a154b,
+    //   position: { x: 15, z: -210 },
+    //   route: '/slack',
+    //   localImage: slackIcon
+    // },
   ];
 
   // Initialize Three.js Scene
@@ -556,9 +568,7 @@ export default function SocialMediaCity() {
             setTimeout(() => {
               if (platform.route) {
                 navigate(platform.route);
-              } else {
-                window.open(platform.link, '_blank');
-              }
+              } 
             }, 800);
           }
         }

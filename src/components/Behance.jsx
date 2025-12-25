@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import cubeImage from '/udacity.jpg';
+import cubeImage from '/behance.png';
 
 export default function RotatingCube() {
   const mountRef = useRef(null);
@@ -15,7 +15,7 @@ export default function RotatingCube() {
     const width = mountRef.current.clientWidth;
     const height = getHeight();
 
-    document.title = 'Udaicty'
+    document.title = 'Behance'
 
     // Scene
     const scene = new THREE.Scene();
@@ -95,28 +95,28 @@ export default function RotatingCube() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Udaicty
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#053eff] leading-tight">
+            Behance
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            Udacity is an online education platform offering nanodegree programs and courses in tech fields like AI, programming, data science, and more.
+            Behance is a creative platform where designers, artists, and creators showcase their work, discover inspiration, and connect with creative professionals around the world.
           </p>
           <a
-            href="https://www.udaicty.com"
+            href="https://www.behance.net/"
             rel="noopener noreferrer"
             className="
               inline-flex items-center justify-center
               px-8 py-4 mt-4
               text-lg font-bold
-              text-black
-              bg-white
+              text-white
+              bg-[#053eff]
               rounded-full
               hover:opacity-90
               transition duration-300
               shadow-lg
             "
           >
-            Visit Notion
+            Visit Behance
           </a>
         </div>
         {/* Videos */}
@@ -132,7 +132,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/kOf3QSBV29Y?si=6rZYG96Yfo8WTyhZ"
+                  src="https://www.youtube.com/embed/g3Q9IS6U7fM?si=P4QOs6hnQz4EoMLi"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -145,7 +145,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/PFHsAX9Eu7c?si=TKl6caF77s0uIUYd"
+                  src="https://www.youtube.com/embed/ds81dLm1l8g?si=DCbqVPjRpRHVbjZz"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen
