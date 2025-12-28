@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import cubeImage from '/shark-tank.png';
+import cubeImage from '/KhanAcademy.png';
 
-export default function RotatingCube() {
+export default function KhanAcademyRotatingCube() {
   const mountRef = useRef(null);
   const isInitialized = useRef(false);
   const animationId = useRef(null);
@@ -15,7 +15,7 @@ export default function RotatingCube() {
     const width = mountRef.current.clientWidth;
     const height = getHeight();
 
-    document.title = 'Shark Tank'
+    document.title = 'Khan Academy'
 
     // Scene
     const scene = new THREE.Scene();
@@ -95,28 +95,28 @@ export default function RotatingCube() {
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 md:pb-20">
         <div className="text-center space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#3badca] leading-tight">
-            Shark Tank
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#14BF96] leading-tight">
+            Khan Academy
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-              Shark Tank is a business reality TV show where entrepreneurs pitch their ideas to a panel of investors, seeking funding, mentorship, and strategic partnerships.
+            Behance is a creative platform where designers, artists, and creators showcase their work, discover inspiration, and connect with creative professionals around the world.
           </p>
           <a
-            href="https://abc.com/show/535e2b07-18a9-4d94-9803-9ed8257b9d23"
+            href="https://www.behance.net/"
             rel="noopener noreferrer"
             className="
               inline-flex items-center justify-center
               px-8 py-4 mt-4
               text-lg font-bold
               text-black
-              bg-[#3badca]
+              bg-[#14BF96]
               rounded-full
               hover:opacity-90
               transition duration-300
               shadow-lg
             "
           >
-            Visit Shark Tank
+            Visit Khan Academy
           </a>
         </div>
         {/* Videos */}
@@ -132,7 +132,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/6hRYYVZpojA? si=0n6am-mFspMpIo6T"
+                  src="https://www.youtube.com/embed/g3Q9IS6U7fM?si=P4QOs6hnQz4EoMLi"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -145,7 +145,7 @@ export default function RotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/tm-3YaAo4Gs?si=K3SKUFERigwT75bg"
+                  src="https://www.youtube.com/embed/ds81dLm1l8g?si=DCbqVPjRpRHVbjZz"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen

@@ -18,7 +18,8 @@ import chatgptIcon from '/chatgpt.png';
 import courseraIcon from '/coursera.png';
 import geminiIcon from '/gemini.png';
 import behanceIcon from '/behance.png';
-import sharktank from '/shark-tank.png'
+import sharktank from '/shark-tank.png';
+import KhanAcademy from '/KhanAcademy.png';
 
 export default function SocialMediaCity() {
   const containerRef = useRef(null);
@@ -169,27 +170,13 @@ export default function SocialMediaCity() {
       route: '/sharktank',
       localImage: sharktank
     },
-    // {
-    //   name: 'TikTok',
-    //   color: 0x000000,
-    //   position: { x: 25, z: -190 },
-    //   route: '/tiktok',
-    //   localImage: tiktokIcon
-    // },
-    // {
-    //   name: 'Medium',
-    //   color: 0x000000,
-    //   position: { x: -15, z: -210 },
-    //   route: '/medium',
-    //   localImage: mediumIcon
-    // },
-    // {
-    //   name: 'Slack',
-    //   color: 0x4a154b,
-    //   position: { x: 15, z: -210 },
-    //   route: '/slack',
-    //   localImage: slackIcon
-    // },
+    {
+      name: 'Khan Academy',
+      color: 0x000000,
+      position: { x: 25, z: -190 },
+      route: '/khanacademy',
+      localImage: KhanAcademy
+    },
   ];
 
   // Initialize Three.js Scene

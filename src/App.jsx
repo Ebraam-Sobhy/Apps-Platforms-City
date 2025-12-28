@@ -17,6 +17,8 @@ import Coursera from './components/Coursera';
 import Chatgpt from './components/Chatgbt';
 import Gemini from './components/Gemini';
 import Behance from './components/Behance';
+import SharkTank from './components/SharkTank';
+import KhanAcademy from './components/KhanAcademy';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
       <Route path="/Chatgpt" element={<Chatgpt />} />
       <Route path="/gemini" element={<Gemini />} />
       <Route path="/behance" element={<Behance />} />
+      <Route path="/sharktank" element={<SharkTank />} />
+      <Route path="/khanacademy" element={<KhanAcademy />} />
     </Routes>
   );
 }

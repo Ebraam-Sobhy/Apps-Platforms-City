@@ -15,7 +15,7 @@ export default function RotatingCube() {
     const width = mountRef.current.clientWidth;
     const height = getHeight();
 
-    document.title = 'LinkedIn'
+    document.title = 'Notion'
 
     // Scene
     const scene = new THREE.Scene();

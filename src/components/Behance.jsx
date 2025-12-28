@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import cubeImage from '/behance.png';
 
-export default function RotatingCube() {
+export default function KhanAcademyRotatingCube() {
   const mountRef = useRef(null);
   const isInitialized = useRef(false);
   const animationId = useRef(null);
