@@ -99,10 +99,10 @@ export default function KhanAcademyRotatingCube() {
             Khan Academy
           </h1>
           <p className="text-base sm:text-2xl md:text-2xl text-white leading-relaxed max-w-4xl mx-auto">
-            Behance is a creative platform where designers, artists, and creators showcase their work, discover inspiration, and connect with creative professionals around the world.
+              Khan Academy is a free online learning platform that offers high-quality educational content in subjects like math, science, computer programming, and more for learners of all ages.
           </p>
           <a
-            href="https://www.behance.net/"
+            href="https://www.khanacademy.org/"
             rel="noopener noreferrer"
             className="
               inline-flex items-center justify-center
@@ -132,7 +132,7 @@ export default function KhanAcademyRotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/g3Q9IS6U7fM?si=P4QOs6hnQz4EoMLi"
+                  src="https://www.youtube.com/embed/FdB5qhGRSgQ?si=9MElrTAwQ3v27EcK"
                   title="Video 1"
                   frameBorder="0"
                   allowFullScreen
@@ -145,7 +145,7 @@ export default function KhanAcademyRotatingCube() {
               <div className="relative aspect-video overflow-hidden rounded-2xl border-2 border-gray-200 shadow-xl">
                 <iframe
                   className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/ds81dLm1l8g?si=DCbqVPjRpRHVbjZz"
+                  src="https://www.youtube.com/embed/JC82Il2cjqA?si=T3cPRGFRjxQjh-Tc"
                   title="Video 2"
                   frameBorder="0"
                   allowFullScreen
