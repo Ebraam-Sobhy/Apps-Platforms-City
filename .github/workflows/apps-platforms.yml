@@ -1,0 +1,36 @@
+name: Apps-Platforms CI
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [24]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Vercel Deployment
+        run: |
+          echo "Live Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "https://apps-platforms-city.vercel.app" >> $GITHUB_STEP_SUMMARY

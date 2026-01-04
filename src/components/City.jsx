@@ -565,42 +565,6 @@ export default function SocialMediaCity() {
     return buildingGroup;
   };
 
-  // Create Trees for decoration (same as before)
-  const createTrees = (scene, platforms, count = 50) => {
-  for (let i = 0; i < count; i++) {
-    const treeGroup = new THREE.Group();
-
-    const trunkGeometry = new THREE.CylinderGeometry(0.3, 0.4, 3, 8);
-    const trunkMaterial = new THREE.MeshStandardMaterial({ color: 0x654321 });
-    const trunk = new THREE.Mesh(trunkGeometry, trunkMaterial);
-    trunk.castShadow = true;
-    treeGroup.add(trunk);
-
-    const foliageGeometry = new THREE.SphereGeometry(1.5, 8, 8);
-    const foliageMaterial = new THREE.MeshStandardMaterial({ color: 0x2d5016 });
-    const foliage = new THREE.Mesh(foliageGeometry, foliageMaterial);
-    foliage.position.y = 3;
-    foliage.castShadow = true;
-    treeGroup.add(foliage);
-
-    let x, z;
-    do {
-      x = (Math.random() - 0.5) * 80;
-      const minZ = Math.min(...platforms.map(p => p.position.z));
-      z = Math.random() * -80 + minZ; // cover all platforms
-    } while (
-      Math.abs(x) < 10 ||
-      platforms.some(p =>
-        Math.abs(x - p.position.x) < 10 &&
-        Math.abs(z - p.position.z) < 10
-      )
-    );
-
-    treeGroup.position.set(x, 0, z);
-    scene.add(treeGroup);
-  }
-};
-
   // Create Street Lamps (same as before)
   const createStreetLamps = (scene, count = 22) => {
     for (let i = 0; i < count; i++) {
