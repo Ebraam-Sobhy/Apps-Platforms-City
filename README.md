@@ -109,7 +109,7 @@ The output will be in the `dist/` directory. You can preview it locally using:
 npm run preview
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 This project includes a production-ready `Dockerfile` serving the app via Nginx.
 
@@ -124,7 +124,7 @@ This project includes a production-ready `Dockerfile` serving the app via Nginx.
    ```
    Access the app at `http://localhost:8080`.
 
-## 🎮 Controls
+## Controls
 
 | Action | Desktop (Keyboard) | Mobile (Touch Interface) |
 | :--- | :--- | :--- |
@@ -134,7 +134,7 @@ This project includes a production-ready `Dockerfile` serving the app via Nginx.
 | **Turn Right** | `D` or `Arrow Right` | `►` Button |
 | **Enter Building** | Click "Visit [Platform]" | Tap "Visit [Platform]" |
 
-## 🌟 Platforms & Zones
+## Platforms & Zones
 
 The city is organized into thematic zones:
 
@@ -145,7 +145,7 @@ The city is organized into thematic zones:
 - **Artificial Intelligence**: ChatGPT, Gemini
 - **Creative & Media**: Behance, YouTube
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to expand the city!
 
@@ -155,6 +155,6 @@ We welcome contributions to expand the city!
 4. **Push** to the branch: `git push origin feature/NewBuilding`.
 5. Open a **Pull Request**.
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
